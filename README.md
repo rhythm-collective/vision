@@ -1,24 +1,32 @@
 #Services:
 - Support content restriction based on authentication of a user. If authenticated, direct to the private beta.
 
-Can we do this more cheaply and quickly if we don’t use a traditional database? Whitelist an n-digit code that must be entered by the user on landing. Store it in a cookie to prevent multiple sign ins. We give out one of these codes to each of the beta participants.
+Trumpet: Can we do this more cheaply and quickly if we don’t use a traditional database? Whitelist an n-digit code that must be entered by the user on landing. Store it in a cookie to prevent multiple sign ins. We give out one of these codes to each of the beta participants.
+
+Adam: Let's use redis to track usage of tokens, store the cookie to let people in, token cannot be used more than once.
 
 - (?) Do we want a built in feedback mechanism or an invite to a private beta user section of this discord server?
 
-We can provide a link to a google form for them to give feedback - this requires the least commitment from a user. A discord server would work great in addition to the form since we can give these beta users updates and we already think a lot of FFR people use discord.
+Trumpet: We can provide a link to a google form for them to give feedback - this requires the least commitment from a user. A discord server would work great in addition to the form since we can give these beta users updates and we already think a lot of FFR people use discord.
+
+Adam: Google form guarantees that at the very least the people who don't care might say so. Anything more is a little complicated.
 
 - (?) Do we want registration?
 
 Until we have a specific feature that requires registration, I would fight this. In fact I would fight us having a database at all until it’s absolutely necessary. It’s just another thing to have to maintain and pay for, and another step of setup for a user.
 
+Adam: No registration.
+
 - (?) Do we want score retention, caching, saving?
 
 #On storage:
-How feasible is it to store replays server-side? I did some math...
+How feasible is it to store replays server-side? [I did some math...](https://docs.google.com/spreadsheets/d/1XaQF-2RA4qz9xj_9tjsnIMQaDxNw3S9Co8nYrzsfTb4/edit?usp=sharing)
 How feasible is it to access/query replays? I’m not so familiar with this part
 Leaderboards scale with the number of songs and the number of users, which has its own problems depending on how we allow more songs to be added
 
 I’m going to fight us incurring costs because (1) this game we’re developing is unproven, (2) constraints encourage creativity, and (3) we don’t really know what users want, or rather, whether users are willing to pay for what they want. The fact that we’re not incurring costs actually gives us incredible freedom. We can go in whatever direction our users drive us.
+
+Adam: Any score retention must be minimal.
 
 #Game MVP:
 - Upload your own .sm and .mp3 file
