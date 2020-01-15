@@ -37,3 +37,5 @@ TODO:
 - A simple page with the game embedded in i for people authenticated and authorized to see the content.
 - A simple page saying "coming soon" for people unauthenticated, or people authenticated without authorization.
 - (?) Do we want the website to have a leaderboard or stats or anything? (Answered above)
+
+2020-01-14: Comments and revisions from Zageron
